@@ -1,0 +1,50 @@
+  server:
+    port: 54079
+
+  spring:
+    application:
+      name: testbat
+
+    datasource:
+      username: app
+      password: 0r@nG&*rdC
+      url: jdbc:mysql://10.25.3.83:3306/Testbat?autoReconnect=true
+      hikari:
+        minimum-idle: 10
+        maximum-pool-size: 10000
+        idle-timeout: 120000
+        max-lifetime: 500000
+
+
+    jpa:
+      properties:
+        dialect: org.hibernate.dialect.MySQL5Dialect
+
+      hibernate:
+        ddl-auto: update
+      show-sql: true
+    mail:
+      host: 10.25.3.122
+      port: 25
+      properties.mail.smtp:
+        auth: false
+
+    servlet:
+      multipart:
+        enabled: true
+        max-file-size: 100MB
+        max-request-size: 100MB
+
+
+
+  allowedOrigins: '*'
+
+  directions: DG,DJAR,Finances,DRH,DAL,DMC,B2B,DEC,OM,DST,DVD,DRSI,GRAND KASAI ,GRAND KATANGA ,GRAND KIVU ,GRAND NORD ,KINSHASA ,KONGO CENTRAL
+  logging:
+    file:
+       name: due_diligence_app.log
+       path: /
+
+  myapp:
+    smsUrl: http://10.25.3.81:3010/
+    delay: 5
