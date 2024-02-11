@@ -1,14 +1,14 @@
   server:
-    port: 54079
+    port: 8080
 
   spring:
     application:
-      name: testbat
+      name: syprome
 
     datasource:
-      username: app
-      password: 0r@nG&*rdC
-      url: jdbc:mysql://10.25.3.83:3306/Testbat?autoReconnect=true
+      username: 'dev'
+      password: 'Test@243'
+      url: jdbc:mariadb://34.68.248.132:3306/syprome
       hikari:
         minimum-idle: 10
         maximum-pool-size: 10000
@@ -18,7 +18,7 @@
 
     jpa:
       properties:
-        dialect: org.hibernate.dialect.MySQL5Dialect
+        dialect: org.mariadb.jdbc.Driver
 
       hibernate:
         ddl-auto: update
@@ -42,7 +42,7 @@
   directions: DG,DJAR,Finances,DRH,DAL,DMC,B2B,DEC,OM,DST,DVD,DRSI,GRAND KASAI ,GRAND KATANGA ,GRAND KIVU ,GRAND NORD ,KINSHASA ,KONGO CENTRAL
   logging:
     file:
-       name: due_diligence_app.log
+       name: syprome.log
        path: /
 
   myapp:
